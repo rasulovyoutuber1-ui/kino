@@ -29,14 +29,14 @@ load_dotenv()
 
 @dataclass
 class Config:
-    BOT_TOKEN: str = os.getenv("BOT_TOKEN", "")
+    BOT_TOKEN: str = os.getenv("8220814941:AAHVtTIJOHReLcmhtMG9iH3WqxWgpmjHEbU", "")
     ADMIN_IDS: List[int] = None
-    CHANNEL_ID: int = int(os.getenv("CHANNEL_ID", "0"))
-    CHANNEL_LINK: str = os.getenv("CHANNEL_LINK", "")
+    CHANNEL_ID: int = int(os.getenv("-1003852596133", "0"))
+    CHANNEL_LINK: str = os.getenv("@kagedub1", "")
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./kino_bot.db")
 
     def __post_init__(self):
-        admin_ids = os.getenv("ADMIN_IDS", "")
+        admin_ids = os.getenv("8318241400", "")
         self.ADMIN_IDS = [int(x.strip()) for x in admin_ids.split(",") if x.strip()]
 
 config = Config()
